@@ -1,0 +1,195 @@
+{
+    "controllers": [
+        {
+            "opts": {
+                "hostname": "c0",
+                "mac": "01:1B:44:11:3A:B7",
+                "remoteIP": "127.0.0.1",
+                "remotePort": "6633"
+            },
+            "x": "491.0",
+            "y": "83.0"
+        }
+    ],
+    "hosts": [
+        {
+            "number": "1",
+            "opts": {
+                "hostname": "h1",
+                "ip": "10.0.0.1",
+                "mac": "00:1B:44:11:3A:B1",
+                "nodeNum": 1,
+                "port": "12"
+            },
+            "x": "61.0",
+            "y": "477.0"
+        },
+        {
+            "number": "2",
+            "opts": {
+                "hostname": "h2",
+                "ip": "10.0.0.2",
+                "mac": "00:1B:44:11:3A:B2",
+                "nodeNum": 2,
+                "port": "21"
+            },
+            "x": "939.0",
+            "y": "475.0"
+        }
+    ],
+    "links": [
+        {
+            "dest": "s1",
+            "opts": {
+                "bw": "1000",
+                "distance": "1",
+                "propagation_speed": "240000000"
+            },
+            "src": "h1"
+        },
+        {
+            "dest": "h2",
+            "opts": {
+                "bw": 1000,
+                "distance": 1,
+                "propagation_speed": 240000000
+            },
+            "src": "s2"
+        },
+        {
+            "dest": "s3",
+            "opts": {
+                "bw": 1000,
+                "distance": 1,
+                "propagation_speed": 240000000
+            },
+            "src": "s1"
+        },
+        {
+            "dest": "s4",
+            "opts": {
+                "bw": "10000",
+                "distance": "1",
+                "propagation_speed": "240000000"
+            },
+            "src": "s3"
+        },
+        {
+            "dest": "s2",
+            "opts": {
+                "bw": 1000,
+                "distance": 1,
+                "propagation_speed": 240000000
+            },
+            "src": "s4"
+        },
+        {
+            "dest": "s6",
+            "opts": {
+                "bw": 1000,
+                "distance": 1,
+                "propagation_speed": 240000000
+            },
+            "src": "s2"
+        },
+        {
+            "dest": "s5",
+            "opts": {
+                "bw": 1000,
+                "distance": 1,
+                "propagation_speed": 240000000
+            },
+            "src": "s6"
+        },
+        {
+            "dest": "s1",
+            "opts": {
+                "bw": 1000,
+                "distance": 1,
+                "propagation_speed": 240000000
+            },
+            "src": "s5"
+        }
+    ],
+    "switches": [
+        {
+            "number": "1",
+            "opts": {
+                "controllers": [
+                    "c0"
+                ],
+                "hostname": "s1",
+                "ip": "192.168.2.1",
+                "mac": "00:1B:44:11:A1:B7",
+                "nodeNum": 1
+            },
+            "x": "61.0",
+            "y": "301.0"
+        },
+        {
+            "number": "2",
+            "opts": {
+                "controllers": [
+                    "c0"
+                ],
+                "hostname": "s2",
+                "nodeNum": 2,
+                "switchType": "default"
+            },
+            "x": "938.0",
+            "y": "293.0"
+        },
+        {
+            "number": "3",
+            "opts": {
+                "controllers": [
+                    "c0"
+                ],
+                "hostname": "s3",
+                "nodeNum": 3,
+                "switchType": "default"
+            },
+            "x": "254.0",
+            "y": "266.0"
+        },
+        {
+            "number": "4",
+            "opts": {
+                "controllers": [
+                    "c0"
+                ],
+                "hostname": "s4",
+                "nodeNum": 4,
+                "switchType": "default"
+            },
+            "x": "720.0",
+            "y": "264.0"
+        },
+        {
+            "number": "5",
+            "opts": {
+                "controllers": [
+                    "c0"
+                ],
+                "hostname": "s5",
+                "nodeNum": 5,
+                "switchType": "default"
+            },
+            "x": "326.0",
+            "y": "450.0"
+        },
+        {
+            "number": "6",
+            "opts": {
+                "controllers": [
+                    "c0"
+                ],
+                "hostname": "s6",
+                "nodeNum": 6,
+                "switchType": "default"
+            },
+            "x": "603.0",
+            "y": "452.0"
+        }
+    ]
+}
