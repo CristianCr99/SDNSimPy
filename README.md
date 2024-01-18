@@ -1,4 +1,4 @@
-# SDN-Simulator
+# SDNSimPy
 
 1. Installing Python 3.8
 
